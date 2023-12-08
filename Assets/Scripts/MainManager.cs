@@ -16,6 +16,7 @@ public class MainManager : MonoBehaviour
     private int score;
     private float timer;
     private bool m_GameOver = false;
+    private float currentspeed;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class MainManager : MonoBehaviour
             if (point >= 1)
             {
                 AddPoint(1);
+                gameManager.AddSpeed(0.0003f);
                 point = 0;
             }
             int qty = GameObject.FindGameObjectsWithTag("Player").Length;

@@ -34,9 +34,9 @@ public class Spawner : MonoBehaviour
 
     void SpawnObject()
     {
-        Vector3 spawnPosition = new Vector3(Random.Range(-6f, 6f), 7f, -0.5f);
+        Vector3 spawnPosition = new Vector3(Random.Range(-6f, 6f), 20f, -0.5f);
         Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-        timer = 2.5f;
+        timer = 2f;
     }
 }
 

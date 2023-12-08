@@ -13,6 +13,6 @@ public class Brick : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(Vector3.down * gameManager.GameSpeed(currentspeed) * Time.deltaTime);
+        transform.Translate(Vector3.down * gameManager.AddSpeed(currentspeed) * Time.deltaTime);
     }
 }

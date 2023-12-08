@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public bool gameOver;
-    private float gameSpeed;
+    public float gameSpeed;
     private int point;
     public TextMeshProUGUI bestScoreText;
     public bool isBestExists;
@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         Debug.Log("Game Over");
     }
+    public float AddSpeed(float gs)
+    {
+        gameSpeed += gs;
+        return gameSpeed;
+    }
+
     public float GameSpeed(float currentspped)
     {
         float currentspeed = gameSpeed;
@@ -76,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     public string ShowHighScore()
     {
-        if (!isBestExists) return "There is no record yet!";
+        if (!isBestExists) return "0";
         return $"{bestScore}";
     }
     public int bestScore { get { return _bestScore; } set { _bestScore = value; } }
